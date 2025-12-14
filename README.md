@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Het+Patel;Backend+Developer+%7C+Python+%2B+FastAPI;Building+Scalable+REST+APIs;Tech+Entrepreneur+%F0%9F%9A%80;Open+to+Collaborations!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Het+Patel;Backend+Developer+%7C+Python+%2B+FastAPI;Building+Scalable+REST+APIs;Full-Stack+Developer;Open+to+Collaborations!" alt="Typing SVG" />
 </div>
 
 <h3 align="center">💻 Backend Developer | 🚀 Tech Entrepreneur | 🎓 BTech CS Student</h3>
@@ -32,17 +32,34 @@ het.say_hi()
 
 text
 
-- 🔧 **Backend Specialist**: Python & FastAPI | PostgreSQL | REST APIs
+I'm a **Computer Engineering student** and **full-stack developer** who builds production-ready web and mobile applications end-to-end — from database design to deployment. My core strength is **backend engineering** and clean, scalable APIs, but I'm comfortable owning the full stack when a project needs it.
+
+### 💼 What I Do
+
+- 🔧 **Backend Specialist**: Building robust APIs with Python & FastAPI | PostgreSQL | REST architecture
+- 🎨 **Frontend Development**: Creating modern interfaces with Next.js, React & TypeScript
+- 📱 **Mobile Development**: Cross-platform apps using Flutter
+- 🏗️ **System Architecture**: Focus on performance, scalability, and clear documentation
 - 💼 **Founder**: [webyourvyavsay](https://webyourvyavsay.com) - Custom AI agents & automation solutions
-- 🏆 **Hackathon Enthusiast**: SIH'25 | NASA Space Apps Challenge participant
-- 📫 **Reach me**: hetpatelsk@gmail.com
+
+### 🎯 Recent Work
+
+- **SmartWork 360** – Productivity platform with complete backend infrastructure, RBAC, email flows, and admin dashboard
+- **NASA Space Apps Challenge** – Weather prediction system integrating AI/ML models
+- **Business Automation Tools** – Custom CRM and operational systems for real clients, including my family business
+
+### 🤝 Let's Connect
+
+I'm available for **backend development**, **API design/integration**, and **full-stack builds**. If you're looking to turn a business problem into a reliable product, let's discuss what you're building!
+
+📫 **Reach me**: hetpatelsk@gmail.com
 
 ---
 
 ## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,typescript,nextjs,react,nodejs,postgres,mongodb,docker,git,github,linux,vscode,postman&perline=7" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,typescript,nextjs,react,nodejs,flutter,postgres,mongodb,docker,git,github,linux,vscode,postman&perline=8" alt="Tech Stack" />
 </p>
 
 ### Languages & Frameworks
@@ -52,6 +69,7 @@ text
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 
@@ -95,10 +113,11 @@ text
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [**SmartWork 360**](https://github.com/Het161/smartwork360-backend) | Employee Time-Tracking System | FastAPI • PostgreSQL • JWT |
-| [**Inventory Management**](https://github.com/Het161/inventory-system) | Full-Stack Business Solution | Next.js • FastAPI • 3D Viz |
-| [**NASA Space App**](https://github.com/Het161/nasa-weather-api) | Weather Prediction Backend | Python • NASA POWER API |
-| [**Campus Whisper**](https://github.com/Het161/campus-whisper) | Social Networking Platform | Python • REST APIs |
+| [**SmartWork 360**](https://github.com/Het161/smartwork360-backend) | Employee Time-Tracking & Productivity Platform | FastAPI • PostgreSQL • RBAC • JWT |
+| [**Inventory Management**](https://github.com/Het161/inventory-system) | Full-Stack Business Solution | Next.js • FastAPI • 3D Visualization |
+| [**NASA Space App**](https://github.com/Het161/nasa-weather-api) | Weather Prediction with AI/ML Models | Python • NASA POWER API • ML |
+| [**Campus Whisper**](https://github.com/Het161/campus-whisper) | Social Networking Platform Backend | Python • FastAPI • REST APIs |
+| [**Business Automation**](https://github.com/Het161/crm-system) | Custom CRM & Operational Tools | Next.js • PostgreSQL • Automation |
 
 </div>
 
@@ -129,5 +148,5 @@ text
   
   ### 💡 "Code is like humor. When you have to explain it, it's bad." – Cory House
   
-  **Open to Collaborations | Let's Build Something Amazing! 🚀**
+  **Open to Collaborations | Let's Build Something Amazing Together! 🚀**
 </div>
