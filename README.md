@@ -15,23 +15,6 @@
 
 ## 🚀 About Me
 
-class HetPatel:
-def init(self):
-self.role = "Backend Developer"
-self.education = "BTech CS @ Gandhinagar University (2nd Year)"
-self.company = "Founder @ webyourvyavsay"
-self.tech_stack = ["Python", "FastAPI", "PostgreSQL", "Next.js", "Docker"]
-self.currently_learning = ["AI/ML", "Blockchain", "Spring Boot", "System Design"]
-self.hackathons = ["SIH'25", "NASA Space Apps Challenge"]
-
-text
-def say_hi(self):
-    print("Thanks for visiting! Let's build something amazing together 🚀")
-het = HetPatel()
-het.say_hi()
-
-text
-
 I'm a **Computer Engineering student** and **full-stack developer** who builds production-ready web and mobile applications end-to-end — from database design to deployment. My core strength is **backend engineering** and clean, scalable APIs, but I'm comfortable owning the full stack when a project needs it.
 
 ### 💼 What I Do
