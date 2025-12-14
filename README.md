@@ -1,23 +1,87 @@
-## Hi there 👋
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Hi+there+%F0%9F%91%8B+I'm+Het+Patel;Backend+Developer+%7C+Python+%2B+FastAPI;Building+Scalable+REST+APIs;Open+to+Collaborations!" alt="Typing SVG" />
+</div>
 
-# 💫 About Me:
-💻 About Me<br>🔧 Backend Developer specializing in Python & FastAPI, building scalable REST APIs and production-ready systems with PostgreSQL.<br><br>🎓 BTech Computer Engineering student at Gandhinagar University, India (2nd year) | Passionate about clean architecture, modular code, and deployment best practices.<br><br>🚀 Founder @ webyourvyavsay – A tech startup offering custom websites, AI agents, and automation solutions. Currently building inventory management systems, productivity platforms, and business tools from scratch.<br><br>🛠️ Recent Projects:<br><br>SmartWork 360: Employee time-tracking system with FastAPI backend, JWT auth, and role-based dashboards<br><br>Inventory Management System: Full-stack solution with Next.js frontend and FastAPI backend<br><br>NASA Space Apps Challenge: Weather prediction backend using NASA POWER API<br><br>Campus Whisper Connect: Social networking platform backend<br><br>🌱 Currently Learning: AI/ML integration, blockchain audit systems, Spring Boot (Java migration), and advanced system design patterns<br><br>🏆 Hackathon Enthusiast: Active participant in SIH and NASA Space Apps Challenge<br><br>💡 Tech Stack: Python - FastAPI - PostgreSQL - Next.js - TypeScript - Docker - Git - Linux/macOS CLI<br><br>📫 Open to: Backend collaborations, open-source contributions, hackathons, and freelance projects
-
-
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/hetpatel0812) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/Hetkumar Sanjaykumar Patel) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:hetpatelsk@gmail.com) 
-
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Het161&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Het161&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Het161&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Het161&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+<h3 align="center">💻 Backend Developer | 🚀 Tech Entrepreneur | 🎓 BTech CS Student</h3>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Het161&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 🚀 About Me
+
+- 🔧 **Backend Specialist**: Python & FastAPI | PostgreSQL | REST APIs
+- 🎓 **Education**: BTech Computer Engineering @ Gandhinagar University (2nd Year)
+- 💼 **Founder**: [webyourvyavsay](https://webyourvyavsay.com) - Custom AI agents & automation solutions
+- 🏆 **Hackathon Enthusiast**: SIH'25 | NASA Space Apps Challenge participant
+- 🌱 **Currently Learning**: AI/ML Integration, Blockchain, Spring Boot, Advanced System Design
+- 📫 **Reach me**: [hetpatelsk@gmail.com](mailto:hetpatelsk@gmail.com)
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+  
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+</div>
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Het161&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Het161&layout=compact&langs_count=8&theme=tokyonight"/>
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Het161&theme=tokyonight&hide_border=false" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Het161&theme=tokyo-night&hide_border=false" alt="Contribution Graph" />
+</div>
+
+---
+
+## 🏆 Featured Projects
+
+### [SmartWork 360](https://github.com/Het161/smartwork360-backend)
+🔸 **Employee Time-Tracking System** | FastAPI • PostgreSQL • JWT Auth • Role-based Dashboards
+
+### [Inventory Management System](https://github.com/Het161/inventory-system)
+🔸 **Full-Stack Solution** | Next.js • FastAPI • 3D Visualizations
+
+### [Campus Whisper Connect](https://github.com/Het161/campus-whisper)
+🔸 **Social Networking Platform Backend** | Python • REST APIs
+
+---
+
+## 🌐 Connect With Me
+
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/Hetkumar-Sanjaykumar-Patel)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/hetpatel0812)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:hetpatelsk@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://buildbyhet.me)
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Het161&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
+</div>
+
+<div align="center">
+  
+### 💡 "Code is like humor. When you have to explain it, it's bad." – Cory House
+
+</div>
