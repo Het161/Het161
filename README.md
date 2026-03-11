@@ -23,7 +23,7 @@ I'm a **Computer Engineering student** and **full-stack developer** who builds p
 - 🎨 **Frontend Development**: Creating modern interfaces with Next.js, React & TypeScript
 - 📱 **Mobile Development**: Cross-platform apps using Flutter
 - 🏗️ **System Architecture**: Focus on performance, scalability, and clear documentation
-- 💼 **Founder**: [webyourvyavsay](https://ommarketingsolutions.in) - Custom AI agents & automation solutions
+- 💼 **Founder**: [OM Marketing Solutions](https://ommarketingsolutions.in) - Custom AI agents & automation solutions
 
 ### 🎯 Recent Work
 
