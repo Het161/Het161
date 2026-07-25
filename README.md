@@ -1,8 +1,8 @@
-<h1 align="center">Hi 👋 I'm Het Patel</h1>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20&height=200&section=header&text=Het%20Patel&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Full-Stack%20Developer%20%C2%B7%20Building%20Live%20SaaS%20Products&descSize=18&descAlignY=75" />
 
-<h3 align="center">Full-Stack Developer · MERN + Next.js · Founder @ OM Marketing Solutions</h3>
-
-<p align="center">I design and ship production web applications end-to-end — from database schema to deployment.<br/>19+ live client sites across 16 industries · a live booking SaaS · AI-powered products.</p>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%C2%B7+MERN+%2B+Next.js;Building+FirstBookit+%E2%80%94+Live+Booking+SaaS;AI-Powered+Products+%C2%B7+Groq+%2B+Claude;Ship+it.+Iterate.+Ship+again." />
+</p>
 
 <p align="center">
   <a href="https://buildbyhet.me"><img src="https://img.shields.io/badge/Portfolio-buildbyhet.me-8B5CF6?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"></a>
@@ -15,13 +15,13 @@
 
 ## 🚀 About Me
 
-I'm a **Computer Engineering student** and **full-stack developer** who builds real products for real clients. I run **[OM Marketing Solutions](https://ommarketingsolutions.in)**, a web development & digital marketing agency based in Ahmedabad, and I work as a developer on a **live, multi-role sports-venue booking SaaS** where I own features end-to-end.
+I'm a **Computer Engineering student** and **full-stack developer** working on **[FirstBookit](https://firstbookit.in)** — a live, multi-role sports-venue booking SaaS — where I own features end-to-end: from schema design and API architecture to frontend implementation and production deployment.
 
 I care about shipping things that actually work — clean architecture, production deployments, and code that solves a real problem, not just a demo.
 
-- 🔭 **Currently building:** a live booking SaaS (Next.js · NestJS · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, payments
+- 🔭 **Currently building:** FirstBookit — a live booking SaaS (Next.js · Express · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, Razorpay payments, revenue analytics
 - 🤖 **Exploring:** AI-powered products using LLM APIs (Groq, Anthropic/Claude)
-- 🏢 **Shipped:** 19+ production client websites across 16 industries
+- 🏗️ **Shipped:** 25+ production features on a live SaaS + 19 demo & client sites across 16 industries
 - 🌱 **Deepening:** Data Structures & Algorithms (Java) and system-design fundamentals
 - 📫 **Reach me:** het@buildbyhet.me · [buildbyhet.me](https://buildbyhet.me)
 
@@ -29,25 +29,43 @@ I care about shipping things that actually work — clean architecture, producti
 
 ## 💼 What I Do
 
-- 🔧 **Full-Stack Development** — MERN stack (MongoDB, Express, React, Node.js), Next.js, NestJS, REST APIs, end-to-end feature ownership
+- 🔧 **Full-Stack Development** — MERN stack (MongoDB, Express, React, Node.js), Next.js, REST APIs, end-to-end feature ownership
 - 🎨 **Frontend Engineering** — responsive, modern UIs with React, Next.js & Tailwind CSS; performance-focused and mobile-first
-- 🏗️ **Backend & Architecture** — multi-role JWT auth, SaaS products, queue/worker processing, serverless & database design
+- 🏗️ **Backend & Architecture** — multi-role JWT auth, SaaS products, scheduled jobs, payment integrations, serverless & database design
 - 🤖 **AI Integration** — building products on top of LLM APIs (Groq, Claude) with streaming, RAG, and real-time interaction
-- 💼 **Agency Founder** — delivering complete design + development for businesses across many industries
+- 🚀 **SaaS Product Development** — working on a live production platform with real users, real payments, and real deadlines
 
 ---
 
 ## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,nestjs,express,mongodb,postgres,prisma,tailwind,python,git,github,vercel,postman&perline=8" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,prisma,tailwind,python,git,github,vercel,postman&perline=8" alt="Tech Stack" />
 </p>
 
 **Languages:** TypeScript · JavaScript · Python · SQL · Java (learning DSA)
 **Frontend:** React · Next.js · Tailwind CSS · React Query (TanStack)
-**Backend:** Node.js · NestJS · Express · REST APIs · JWT Auth
+**Backend:** Node.js · Express · REST APIs · JWT Auth · node-cron
 **Databases:** PostgreSQL · MongoDB · Prisma ORM · MongoDB Atlas
 **AI & Tools:** Groq · Anthropic (Claude) API · Razorpay · Git · Vercel · Render · Postman
+
+---
+
+## 💼 Professional Work
+
+### 🏟️ [FirstBookit](https://firstbookit.in) — Sports Venue Booking SaaS · Developer
+A live, production SaaS platform for sports venue management serving real venues and players. I work as a developer on the team, owning features end-to-end.
+
+**What I've built & shipped:**
+- 📅 **Schedule template system** — recurring weekly schedules with override support
+- 💰 **Dynamic pricing engine** — peak/off-peak pricing rules with timezone-safe calculations
+- 📊 **Revenue analytics dashboard** — venue-level earnings, booking trends, and customer insights
+- 🧾 **Multi-slot booking flow** — cart-style booking with Razorpay payment integration & refunds
+- 📱 **WhatsApp booking confirmations** — automated notifications via messaging API
+- 🔔 **In-app notification system** — real-time alerts for bookings, cancellations & payments
+- 🐛 **Critical production fixes** — N+1 query optimization, timezone bug resolution, PR-reviewed workflow
+
+`Next.js 15` · `React 19` · `Express` · `Prisma` · `PostgreSQL` · `Razorpay` · `TanStack Query`
 
 ---
 
@@ -65,33 +83,37 @@ Transforms any GitHub user's commits, repositories, and languages into an **AI-g
 A full-stack AI agent that monitors brand citations across AI search engines (ChatGPT, Perplexity, Claude) and diagnoses citation decay in real time, using persistent memory to learn which fixes recover citations over time.
 `Next.js` · `Node.js/Express` · `MongoDB` · `Groq` · `Hindsight`
 
-### 📊 [SmartWork 360](https://github.com/Het161/smartwork360-backend) — Time-Tracking Platform
-Employee time-tracking & productivity platform with role-based access control and secure authentication.
-`FastAPI` · `PostgreSQL` · `RBAC` · `JWT`
+---
+
+## 🌐 Demo & Client Projects
+
+> 19+ websites designed and built across 16 industries — a mix of live client work and portfolio demos.
+
+| Industry | Project | Link |
+|----------|---------|------|
+| ✈️ Travel | FindUrTrip *(live client)* | [Visit](https://findurtrip.org/) |
+| 🏭 Industrial | SCE Boiler Spares *(live client)* | [Visit](https://sceboilerspares.vercel.app/) |
+| 🏥 Healthcare | Sanjeevani Hospital *(demo)* | [Visit](https://sanjeevani-hospital-blush.vercel.app/) |
+| 🦷 Dental | ARIA Dental Studio *(demo)* | [Visit](https://arhaclinic.netlify.app/) |
+| 🏋️ Fitness | Forge Gym *(demo)* | [Visit](https://forgegymdemo.netlify.app/) |
+| 💇 Salon & Beauty | Lumiere Salon *(demo)* | [Visit](https://lumieresalondemo.netlify.app/) |
+| ⚖️ Legal | Mehta & Kapadia *(demo)* | [Visit](https://lawdemowebsite.netlify.app/) |
+| 🏛️ Architecture | Angan Architecture *(demo)* | [Visit](https://anganarechitecture.netlify.app/) |
+| 🏢 Real Estate | Aavas Realty *(demo)* | [Visit](https://aavas-realty.vercel.app/) |
+| 🎓 Education | Aakash International School *(demo)* | [Visit](https://aakash-international-school.vercel.app/) |
+| 🍽️ Restaurant | Angan Restaurant *(demo)* | [Visit](https://angan-restaurant.vercel.app/) |
+| 🎉 Events | Mehr Events *(demo)* | [Visit](https://mehrevents.netlify.app/) |
+| 🛒 E-commerce | Apna Bazar *(demo)* | [Visit](https://apna-bazar-rust.vercel.app/) |
+
+<p align="center"><b>→ See all 19+ projects at <a href="https://buildbyhet.me">buildbyhet.me</a></b></p>
 
 ---
 
-## 🌐 Live Client Work
+## 🧊 3D Contribution Graph
 
-> Real products, shipped & deployed for actual clients across 16 industries.
-
-| Industry | Project | Live |
-|----------|---------|------|
-| 🏥 Healthcare | Sanjeevani Hospital | [Visit](https://sanjeevani-hospital-blush.vercel.app/) |
-| 🦷 Dental | ARIA Dental Studio | [Visit](https://arhaclinic.netlify.app/) |
-| 🏋️ Fitness | Forge Gym | [Visit](https://forgegymdemo.netlify.app/) |
-| 💇 Salon & Beauty | Lumiere Salon | [Visit](https://lumieresalondemo.netlify.app/) |
-| ⚖️ Legal | Mehta & Kapadia | [Visit](https://lawdemowebsite.netlify.app/) |
-| 🏛️ Architecture | Angan Architecture | [Visit](https://anganarechitecture.netlify.app/) |
-| ✈️ Travel | FindUrTrip | [Visit](https://findurtrip.org/) |
-| 🏢 Real Estate | Aavas Realty | [Visit](https://aavas-realty.vercel.app/) |
-| 🎓 Education | Aakash International School | [Visit](https://aakash-international-school.vercel.app/) |
-| 🍽️ Restaurant | Angan Restaurant | [Visit](https://angan-restaurant.vercel.app/) |
-| 🏭 Industrial | SCE Boiler Spares | [Visit](https://sceboilerspares.vercel.app/) |
-| 🎉 Events | Mehr Events | [Visit](https://mehrevents.netlify.app/) |
-| 🛒 E-commerce | Apna Bazar | [Visit](https://apna-bazar-rust.vercel.app/) |
-
-<p align="center"><b>→ See all 19+ projects at <a href="https://buildbyhet.me">buildbyhet.me</a></b></p>
+<div align="center">
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+</div>
 
 ---
 
@@ -125,5 +147,7 @@ Employee time-tracking & productivity platform with role-based access control an
 
   ### 💡 "Ship it. Iterate. Ship again."
 
-  <b>Open to freelance & full-time roles · Ahmedabad, India 🇮🇳</b>
+  <b>Open to full-time & internship roles · Ahmedabad, India 🇮🇳</b>
 </div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20&height=120&section=footer" />
