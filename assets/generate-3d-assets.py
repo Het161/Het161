@@ -70,6 +70,15 @@ def defs_common(extra=""):
 <radialGradient id="glowB" cx="50%" cy="50%">
   <stop offset="0%" stop-color="#22d3ee" stop-opacity=".35"/><stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
 </radialGradient>
+<radialGradient id="glowGold" cx="50%" cy="50%">
+  <stop offset="0%" stop-color="#f5b32a" stop-opacity=".30"/><stop offset="100%" stop-color="#f5b32a" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowGreen" cx="50%" cy="50%">
+  <stop offset="0%" stop-color="#34d399" stop-opacity=".28"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowBlue" cx="50%" cy="50%">
+  <stop offset="0%" stop-color="#3b82f6" stop-opacity=".38"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+</radialGradient>
 <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
   <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
 </filter>
@@ -79,10 +88,10 @@ def defs_common(extra=""):
 {extra}</defs>'''
 
 
-def card(w, h):
+def card(w, h, gA="glowA", gB="glowB"):
     return (f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="url(#bg)" stroke="#26304d" stroke-width="1.5"/>'
-            f'<ellipse cx="{w*0.28:.0f}" cy="{h*0.25:.0f}" rx="{w*0.35:.0f}" ry="{h*0.5:.0f}" fill="url(#glowA)"/>'
-            f'<ellipse cx="{w*0.78:.0f}" cy="{h*0.8:.0f}" rx="{w*0.3:.0f}" ry="{h*0.45:.0f}" fill="url(#glowB)"/>')
+            f'<ellipse cx="{w*0.28:.0f}" cy="{h*0.25:.0f}" rx="{w*0.35:.0f}" ry="{h*0.5:.0f}" fill="url(#{gA})"/>'
+            f'<ellipse cx="{w*0.78:.0f}" cy="{h*0.8:.0f}" rx="{w*0.3:.0f}" ry="{h*0.45:.0f}" fill="url(#{gB})"/>')
 
 
 def stars(w, h, n=60, seed=7):
@@ -368,7 +377,206 @@ def shiploop():
     return "".join(o)
 
 
+def wire_h(p0, p1, color="#8b5cf6", dur=2.2, begin=0.0, dots=2, width=1.6, r=3.2):
+    """Horizontal connector with marching dashes + traveling packets."""
+    (x0, y0), (x1, y1) = p0, p1
+    mid = (x1 - x0) * 0.45
+    d = f"M {x0:.1f} {y0:.1f} C {x0+mid:.1f} {y0:.1f} {x1-mid:.1f} {y1:.1f} {x1:.1f} {y1:.1f}"
+    out = [f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}" stroke-opacity=".45" '
+           f'stroke-dasharray="6 8" stroke-linecap="round">'
+           f'<animate attributeName="stroke-dashoffset" values="28;0" dur="1.4s" repeatCount="indefinite"/></path>']
+    for k in range(dots):
+        b = begin + k * (dur / dots)
+        out.append(f'<circle r="{r}" fill="{color}" filter="url(#soft2)">'
+                   f'<animateMotion dur="{dur}s" begin="{b:.2f}s" repeatCount="indefinite" path="{d}"/>'
+                   f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="{dur}s" begin="{b:.2f}s" repeatCount="indefinite"/>'
+                   f'</circle>')
+    return "".join(out)
+
+
+def chip(cx, cy, text, color, w=None, size=11, dur=None):
+    w = w or (9.2 * len(text) + 26)
+    a = (f'<animate attributeName="opacity" values=".6;1;.6" dur="{dur}s" repeatCount="indefinite"/>' if dur else '')
+    return (f'<g>{a}<rect x="{cx-w/2:.0f}" y="{cy-15:.0f}" width="{w:.0f}" height="30" rx="15" '
+            f'fill="{color}" fill-opacity=".13" stroke="{color}" stroke-opacity=".55"/>'
+            f'{label(cx, cy + 4.5, text, size, shade(color, 1.5), font=MONO, weight="700")}</g>')
+
+
+# ===================================================== 5. DHANRAKSHAK PIPELINE
+def dhanrakshak():
+    W, H = 1200, 630
+    GOLD, GREEN, BLUE, INDIGO = "#f5b32a", "#34d399", "#38bdf8", "#818cf8"
+    o = [svg_open(W, H), defs_common(), card(W, H, "glowGold", "glowGreen"), stars(W, H, 40, seed=71)]
+    o.append(label(600, 48, "DHANRAKSHAK — THE VERDICT IS DECIDED ON THE PHONE", 17, "#fde68a", ls="3.5"))
+    o.append(label(600, 74, "message · link · screenshot · voice note  →  one engine, one honest answer, in Gujarati", 12.5, "#8093b8", font=MONO))
+
+    # device boundary
+    o.append(f'<rect x="58" y="108" width="1084" height="370" rx="22" fill="{GREEN}" fill-opacity=".035" '
+             f'stroke="{GREEN}" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="9 7">'
+             f'<animate attributeName="stroke-dashoffset" values="32;0" dur="3.2s" repeatCount="indefinite"/></rect>')
+    o.append(label(84, 136, "ON THE DEVICE · NOTHING LEAVES THE PHONE", 11.5, shade(GREEN, 1.15), anchor="start", font=MONO, weight="700", ls="1.2"))
+
+    # inputs
+    inputs = [("message / link", BLUE), ("screenshot", BLUE), ("voice note", BLUE), ("practice call", GOLD)]
+    in_pts = []
+    for i, (name, col) in enumerate(inputs):
+        cx, cy = 168, 200 + i * 64
+        o.append(f'<g>{float_anim(4, 4.2 + i * 0.4, i * 0.35)}{box(0, 0, 2.4, 2.4, 0.85, col, 16.0, cx, cy - 10, stroke=shade(col, 1.5))}</g>')
+        o.append(label(cx + 46, cy - 6, name, 11.5, "#cbd5e1", anchor="start", font=MONO, weight="600"))
+        in_pts.append((cx + 40, cy - 10))
+
+    stages = [
+        (455, "Read + clean", "OCR · speech-to-text", BLUE, None),
+        (676, "Detection engine", "rules + LightGBM", GOLD, "THE VERDICT IS SET HERE"),
+        (890, "Explainer", "local Qwen + RBI / NPCI", INDIGO, "only translates"),
+        (1058, "Verdict card", "flags · why · what to do", GREEN, None),
+    ]
+    goy = 302
+    pts = []
+    body = []
+    for i, (cx, name, sub, col, tag) in enumerate(stages):
+        w = 3.9 if i < 3 else 3.3
+        h = 1.6 if i == 1 else 1.15
+        body.append(f'<g>{float_anim(5, 4.4 + i * 0.5, i * 0.4)}'
+                    f'{box(0, 0, w, w, h, col, 20.0, cx, goy, stroke=shade(col, 1.5))}</g>')
+        tx, ty = iso(w / 2, w / 2, h, 20.0, cx, goy)
+        body.append(label(cx, ty - 26, name, 13, shade(col, 1.45), font=MONO, weight="800"))
+        body.append(label(cx, 414, sub, 11, "#8c9bbd", font=MONO, weight="500"))
+        if tag:
+            body.append(label(cx, 434, tag, 10.5, shade(col, 1.3), font=MONO, weight="700", ls="1"))
+        pts.append((cx, ty + 18))
+
+    links = []
+    for p in in_pts:
+        links.append(wire_h(p, (pts[0][0] - 62, pts[0][1]), BLUE, dur=2.6, begin=0.4, dots=1, width=1.3, r=2.6))
+    for i in range(len(stages) - 1):
+        col = stages[i + 1][3]
+        links.append(wire_h((pts[i][0] + 62, pts[i][1]), (pts[i + 1][0] - 62, pts[i + 1][1]), shade(col, 1.3), dur=2.0, begin=i * 0.5))
+    o.append("".join(links))
+    o.append("".join(body))
+
+    o.append(chip(196, 528, "AIRPLANE MODE OK", GREEN, dur=3.4))
+    o.append(chip(430, 528, "VERDICT IN 150 ms", GOLD, dur=4.0))
+    o.append(chip(672, 528, "GUJARATI · HINDI · EN", INDIGO, dur=3.7))
+    o.append(chip(900, 528, "ZERO CLOUD COST", BLUE, dur=4.3))
+    o.append(chip(1076, 528, "ONLINE = MORE", "#94a3b8", dur=4.6))
+    o.append(label(600, 592, "the model never decides what is a scam — the detector does, and the model only puts it in her words", 12, "#7c8db5", font=MONO))
+    o.append('</svg>')
+    return "".join(o)
+
+
+# ======================================================== 6. DRIFTLOCK MATCHER
+def driftlock():
+    W, H = 1200, 660
+    BLUE, CYAN, GOLD, GREEN = "#3b82f6", "#22d3ee", "#f5b32a", "#4ade80"
+    o = [svg_open(W, H), defs_common(), card(W, H, "glowBlue", "glowA"), stars(W, H, 40, seed=97)]
+    o.append(label(600, 48, "DRIFTLOCK — FINDING ONE DIE SITE IN A PATTERN THAT REPEATS", 17, "#bfdbfe", ls="3"))
+    o.append(label(600, 74, "SEMICON India · Applied Materials PS · classical CV, CPU-only, under a second per pair", 12.5, "#8093b8", font=MONO))
+
+    # ---- wafer field (left)
+    s = 21.0
+    GW, GD = 13, 9
+    gox, goy = 356 - (GW - GD) * KX * s / 2, 196
+    o.append(label(356, 128, "SEARCH FIELD · 10x · noisy", 11.5, "#93a4c8", font=MONO, weight="700", ls="1"))
+
+    cells = []
+    truth = (7, 3)
+    rnd = 12345
+    for gx in range(GW):
+        if gx % 4 == 3:      # mat separator — incommensurate pitch
+            continue
+        for gy in range(GD):
+            if gy % 5 == 4:
+                continue
+            rnd = (rnd * 1103515245 + 12345) % 2147483648
+            hit = (gx in (truth[0], truth[0] + 1)) and (gy in (truth[1], truth[1] + 1))
+            col = GOLD if hit else shade("#46557a", 0.82 + (rnd / 2147483648) * 0.42)
+            hh = 1.0 if hit else 0.42
+            cells.append((gx, gy, box(gx, gy, 0.72, 0.72, hh, col, s, gox, goy,
+                                      stroke=shade(col, 1.5) if hit else None)))
+    cells.sort(key=lambda c: c[0] + c[1])
+    o.append(f'<g>{"".join(c[2] for c in cells)}</g>')
+
+    # decoy near-equal matches
+    for i, (dx, dy) in enumerate([(1, 6), (10, 6), (2, 1)]):
+        p = [iso(dx, dy, 0.62, s, gox, goy), iso(dx + 2, dy, 0.62, s, gox, goy),
+             iso(dx + 2, dy + 2, 0.62, s, gox, goy), iso(dx, dy + 2, 0.62, s, gox, goy)]
+        pd = " ".join(f"{a:.1f},{b:.1f}" for a, b in p)
+        o.append(f'<polygon points="{pd}" fill="none" stroke="#f87171" stroke-width="1.4" stroke-dasharray="4 4">'
+                 f'<animate attributeName="opacity" values=".75;.12;.75" dur="{4.0 + i*0.6}s" '
+                 f'begin="{i*0.5}s" repeatCount="indefinite"/></polygon>')
+
+    # scanning band sweeping along +x
+    band = [iso(0, 0, 0.9, s, gox, goy), iso(1.1, 0, 0.9, s, gox, goy),
+            iso(1.1, GD, 0.9, s, gox, goy), iso(0, GD, 0.9, s, gox, goy)]
+    dx, dy = (GW - 1.1) * KX * s, (GW - 1.1) * KY * s
+    bd = " ".join(f"{a:.1f},{b:.1f}" for a, b in band)
+    o.append(f'<g opacity=".38"><polygon points="{bd}" fill="{CYAN}" opacity="0.45"/>'
+             f'<animateTransform attributeName="transform" type="translate" values="0 0;{dx:.1f} {dy:.1f}" '
+             f'dur="4.5s" repeatCount="indefinite"/></g>')
+
+    # crosshair on the true site
+    tx, ty = iso(truth[0] + 1, truth[1] + 1, 1.0, s, gox, goy)
+    o.append(f'<g filter="url(#soft2)"><circle cx="{tx:.1f}" cy="{ty:.1f}" r="10" fill="none" stroke="{GOLD}" stroke-width="1.8">'
+             f'<animate attributeName="r" values="9;20;9" dur="2.6s" repeatCount="indefinite"/>'
+             f'<animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite"/></circle>'
+             f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="3.4" fill="{GOLD}"/>'
+             f'<line x1="{tx-18:.1f}" y1="{ty:.1f}" x2="{tx+18:.1f}" y2="{ty:.1f}" stroke="{GOLD}" stroke-width="1.2" opacity=".8"/>'
+             f'<line x1="{tx:.1f}" y1="{ty-14:.1f}" x2="{tx:.1f}" y2="{ty+14:.1f}" stroke="{GOLD}" stroke-width="1.2" opacity=".8"/></g>')
+    o.append(f'<line x1="{tx+16:.1f}" y1="{ty-12:.1f}" x2="{tx+56:.1f}" y2="{ty-44:.1f}" stroke="{GOLD}" stroke-width="1.2" opacity=".55"/>')
+    o.append(label(tx + 62, ty - 46, "true site · 0.43 px", 11.5, shade(GOLD, 1.25), anchor="start", font=MONO, weight="800"))
+
+    # reference patch inset
+    rx, ry = 92, 466
+    o.append(f'<rect x="{rx}" y="{ry}" width="112" height="72" rx="8" fill="#0f1730" stroke="{CYAN}" stroke-opacity=".5"/>')
+    for i in range(7):
+        o.append(f'<rect x="{rx+10+i*14}" y="{ry+12}" width="7" height="48" rx="1.5" fill="#93a4c8" opacity=".55"/>')
+    o.append(label(rx + 56, ry + 88, "REFERENCE · 100x", 10.5, "#93a4c8", font=MONO, weight="700"))
+    o.append(f'<path d="M {rx+120} {ry+30} C {rx+210} {ry+18} {tx-140:.0f} {ty+120:.0f} {tx-34:.0f} {ty+22:.0f}" fill="none" '
+             f'stroke="{CYAN}" stroke-width="1.4" stroke-opacity=".45" stroke-dasharray="5 6">'
+             f'<animate attributeName="stroke-dashoffset" values="22;0" dur="1.6s" repeatCount="indefinite"/></path>')
+    o.append(label(392, 452, "the layout repeats everywhere —", 11, "#7f8fb3", anchor="start", font=MONO, weight="500"))
+    o.append(label(392, 472, "hundreds of near-equal matches;", 11, "#7f8fb3", anchor="start", font=MONO, weight="500"))
+    o.append(label(392, 492, "incommensurate mat pitches give", 11, "#7f8fb3", anchor="start", font=MONO, weight="500"))
+    o.append(label(392, 512, "the frame its real landmarks", 11, "#7f8fb3", anchor="start", font=MONO, weight="500"))
+
+    # ---- pipeline (right)
+    px = 900
+    ps = 17.0
+    steps = [
+        ("clean up", "CLAHE · denoise both", BLUE),
+        ("ZNCC sweep", "scale 9.6-10.4 · rot 2 deg", CYAN),
+        ("peak set", "every near-equal match", CYAN),
+        ("centre rule", "official tie-break", BLUE),
+        ("sub-pixel fit", "parabolic refine", BLUE),
+        ("(x, y) + PSR", "confidence ships with it", GOLD),
+    ]
+    o.append(label(px, 128, "ONE PASS · NO GPU · NO WEIGHTS", 11.5, "#93a4c8", font=MONO, weight="700", ls="1"))
+    stack = []
+    joins = []
+    for i, (name, sub, col) in enumerate(steps):
+        cy = 176 + i * 72
+        stack.append(f'<g>{float_anim(3.5, 4.2 + i * 0.35, i * 0.3)}'
+                     f'{box(0, 0, 5.6, 2.6, 1.0, col, ps, px, cy, stroke=shade(col, 1.5))}</g>')
+        lx, ly = iso(2.8, 1.3, 1.0, ps, px, cy)
+        stack.append(label(lx, ly + 4, name, 11, "#f8fafc", font=MONO, weight="700"))
+        stack.append(label(px + 86, ly + 4, sub, 10.5, shade(col, 1.35), anchor="start", font=MONO, weight="500"))
+        if i:
+            joins.append(wire((lx, cy - 30), (lx, cy - 12), shade(col, 1.3), bend=5, dur=1.5,
+                              begin=i * 0.3, dots=1, width=1.5))
+    o.append("".join(joins))
+    o.append("".join(stack))
+
+    o.append(chip(300, 596, "RANK 0 · 0.43 px", GOLD, dur=3.6))
+    o.append(chip(600, 596, "CPU ONLY · NO DEEP LEARNING", GREEN, dur=4.1))
+    o.append(chip(930, 596, "PSR FLAGS THE AMBIGUOUS ONES", CYAN, dur=3.8))
+    o.append('</svg>')
+    return "".join(o)
+
+
 files = {
+    "dhanrakshak-3d.svg": dhanrakshak(),
+    "driftlock-3d.svg": driftlock(),
     "hero-3d.svg": hero(),
     "architecture-3d.svg": architecture(),
     "stack-orbit-3d.svg": orbit(),

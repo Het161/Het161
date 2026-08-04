@@ -105,6 +105,55 @@ sequenceDiagram
 
 ---
 
+## 🛡️ [DhanRakshak](https://dhanrakshakai.netlify.app/) — On-Device Scam Guardian for Rural India
+
+<p>
+  <a href="https://dhanrakshakai.netlify.app/"><img src="https://img.shields.io/badge/Live%20Demo-dhanrakshakai-F5B32A?style=for-the-badge&logo=netlify&logoColor=1a1a1a" alt="Live demo"></a>
+  <a href="https://github.com/Het161/DHANRAKSHAK"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source"></a>
+  <img src="https://img.shields.io/badge/Maverick%20Effect%20AI%20Challenge-2026-34D399?style=for-the-badge" alt="Maverick Effect AI Challenge 2026">
+</p>
+
+A scam guardian for the people UPI brought online and nobody built for. It flags a fraud **before the money moves**, explains **which trick** was used in plain Gujarati, and keeps working with **no internet at all** — because the detector itself ships to the phone.
+
+The part I care about most: **the AI never decides what is a scam.** Rules plus a LightGBM model score every known tactic and set the verdict; the local model only translates that verdict into her words, with the actual RBI/NPCI advisory attached. That's why a small offline model can be trusted here.
+
+<img width="100%" src="./assets/dhanrakshak-3d.svg" alt="DhanRakshak on-device detection pipeline — isometric diagram" />
+
+- 📴 **Offline-first** — real engine exported to the device; verdict in ~150 ms, nothing uploaded
+- 🗣️ **Gujarati-first** — language is the first screen, every verdict can be spoken, elder mode throughout
+- 🎧 **Practice a scam call, safely** — the app plays the fraudster in a real Gujarati voice and coaches her through spotting each trick
+- 📸 **Four inputs, one engine** — SMS/WhatsApp text, links, screenshots (the fake "collect request" trap) and voice notes
+- ☎️ **One tap to act** — ask a family member, or report to the 1930 cybercrime helpline
+
+`Next.js PWA` · `FastAPI` · `Rules + LightGBM` · `Qwen (local) + Groq` · `Chroma` · `Whisper + edge-tts` · `Docker`
+
+---
+
+## 🔬 DriftLock — Sub-Pixel Die-Site Recovery for Wafer Inspection
+
+<p>
+  <a href="https://www.youtube.com/watch?v=UR5ryk2oOdo"><img src="https://img.shields.io/badge/Demo%20Video-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo video"></a>
+  <a href="https://github.com/Het161/driftlock"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source"></a>
+  <img src="https://img.shields.io/badge/SEMICON%20India-Applied%20Materials%20PS-3B82F6?style=for-the-badge" alt="SEMICON India · Applied Materials problem statement">
+</p>
+
+Built for the **Drift-Sense** problem statement (Applied Materials): a wafer inspection tool must return to the *same* die site thousands of times a day, but the stage drifts — and the layout repeats everywhere, so template matching hands back hundreds of near-identical matches.
+
+Our answer is deliberately **classical CV, grounded in SEM physics** — no deep learning, nothing in the judges' as-is run that can break. We generate DRAM-style data with real SEM noise (Poisson + Gaussian, edge brightening), then localize with a multi-scale ZNCC sweep, the official centre rule, and a sub-pixel fit. Output is `(x, y)` **plus a PSR confidence** — when a field is genuinely ambiguous, we say so instead of guessing.
+
+<img width="100%" src="./assets/driftlock-3d.svg" alt="DriftLock matching pipeline — isometric diagram" />
+
+- 📐 **Incommensurate mat pitches** were the breakthrough — pure lattice data ranked the truth ~762nd under noise; landmarks that never line up inside the frame took it to **rank 0, 0.43 px error**
+- ⚡ **CPU only** — no GPU, no model weights, under a second per pair
+- 🧾 **Every generator constant is citation-tagged** in code `[S1]–[S12]`, traced to SEM physics or DRAM 6F² literature
+- 🎯 **Honest failure** — the PSR flag exists for the deliberately ambiguous periodic region in the official test set
+
+`Python 3.10` · `NumPy` · `OpenCV` · `SciPy` · `ZNCC multi-scale matching` · `Matplotlib`
+
+*Team DriftLock — Het Patel (lead) · Eklavya Jha, Gandhinagar University*
+
+---
+
 ## 🤖 Featured Projects
 
 ### 🎯 [HireLoop](https://hireloop-tau.vercel.app/) — AI Mock Interview Platform
@@ -165,52 +214,6 @@ flowchart LR
     class IN,GH c
     class AGG,CACHE,CLAUDE a
     class STORY,SHARE o
-```
-
-</details>
-
-### 🧠 CiteMind — AI Citation Memory Agent · 🏆 HackBaroda 2026 Finalist
-
-A full-stack AI agent that monitors brand citations across AI search engines (ChatGPT, Perplexity, Claude) and diagnoses citation decay in real time, using persistent memory to learn which fixes recover citations over time.
-
-`Next.js` · `Node.js/Express` · `MongoDB` · `Groq` · `Hindsight`
-
-<details>
-<summary><b>🧠 Architecture</b></summary>
-
-```mermaid
-flowchart TD
-    subgraph PROBE["🔍 Probe layer"]
-        P1["ChatGPT"]
-        P2["Perplexity"]
-        P3["Claude"]
-    end
-    subgraph CORE["⚙️ Agent core"]
-        DET["Citation detector"]
-        DIAG["Decay diagnosis"]
-        MEM["Hindsight memory<br/>what fixed what"]
-    end
-    subgraph OUT["📈 Surface"]
-        DASH["Live dashboard"]
-        REC["Ranked fix recommendations"]
-    end
-
-    P1 --> DET
-    P2 --> DET
-    P3 --> DET
-    DET --> DIAG
-    DIAG --> MEM
-    MEM -->|learned playbook| REC
-    DIAG --> DASH
-    REC --> DASH
-    REC -.->|re-test| P1
-
-    classDef c fill:#8b5cf6,stroke:#c4b5fd,color:#fff,stroke-width:1px
-    classDef a fill:#0ea5e9,stroke:#7dd3fc,color:#fff,stroke-width:1px
-    classDef o fill:#a855f7,stroke:#e9d5ff,color:#fff,stroke-width:1px
-    class P1,P2,P3 c
-    class DET,DIAG,MEM a
-    class DASH,REC o
 ```
 
 </details>
@@ -305,6 +308,8 @@ python3 assets/generate-3d-assets.py
 | [`architecture-3d.svg`](./assets/architecture-3d.svg) | FirstBookit's four layers, with request packets travelling between them |
 | [`stack-orbit-3d.svg`](./assets/stack-orbit-3d.svg) | The stack orbiting a core cube, fading as each node passes behind |
 | [`ship-loop-3d.svg`](./assets/ship-loop-3d.svg) | plan → build → ship → measure → iterate, on a loop |
+| [`dhanrakshak-3d.svg`](./assets/dhanrakshak-3d.svg) | Four inputs into one on-device engine, inside a "nothing leaves the phone" boundary |
+| [`driftlock-3d.svg`](./assets/driftlock-3d.svg) | A repeating die field being swept, decoy matches fading, the true site locked at 0.43 px |
 
 </details>
 
