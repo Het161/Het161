@@ -1,0 +1,35 @@
+name: GitHub Stats Card
+
+on:
+  schedule:
+    - cron: "20 3 * * *"    # daily, staggered away from the 3D contrib job
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-stats-card
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate stats card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 assets/generate-stats-card.py ${{ github.repository_owner }}
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add assets/github-stats-3d.svg
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "chore: refresh github stats card"
+          git pull --rebase origin main
+          git push
