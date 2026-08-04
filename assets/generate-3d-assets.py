@@ -574,7 +574,112 @@ def driftlock():
     return "".join(o)
 
 
+# ================================================ 7/8. SITE WALLS (browser cards)
+def screen_card(cx, cy, w, d, h, color, s, uid, title, sub, tsize=11, ssize=10.5,
+                live=False, shine_dur=None, begin=0.0):
+    """An isometric 'browser window' slab with a title bar, label and shine sweep."""
+    P = lambda x, y, z=h: iso(x, y, z, s, cx, cy)
+    top = [P(0, 0), P(w, 0), P(w, d), P(0, d)]
+    bar = [P(0, 0), P(w, 0), P(w, 0.62), P(0, 0.62)]
+    out = [box(0, 0, w, d, h, color, s, cx, cy, stroke=shade(color, 1.5))]
+    out.append(poly(bar, shade(color, 0.55)))
+    for k in range(3):
+        dx, dy = iso(0.35 + k * 0.42, 0.3, h, s, cx, cy)
+        out.append(f'<circle cx="{dx:.1f}" cy="{dy:.1f}" r="{s*0.055:.1f}" fill="{shade(color, 1.55)}" opacity=".85"/>')
+    if shine_dur:
+        band = [P(0, 0), P(0.9, 0), P(0.9, d), P(0, d)]
+        bd = " ".join(f"{a:.1f},{b:.1f}" for a, b in band)
+        td = " ".join(f"{a:.1f},{b:.1f}" for a, b in top)
+        dx, dy = (w - 0.9) * KX * s, (w - 0.9) * KY * s
+        out.append(f'<clipPath id="clip{uid}"><polygon points="{td}"/></clipPath>'
+                   f'<g clip-path="url(#clip{uid})"><polygon points="{bd}" fill="#ffffff" opacity="0.16">'
+                   f'<animateTransform attributeName="transform" type="translate" values="0 0;{dx:.1f} {dy:.1f}" '
+                   f'dur="{shine_dur}s" begin="{begin}s" repeatCount="indefinite"/></polygon></g>')
+    tx, ty = iso(w / 2, d / 2 + 0.25, h, s, cx, cy)
+    out.append(label(tx, ty + 4, title, tsize, "#f8fafc", font=MONO, weight="700"))
+    by = iso(w / 2, d, 0, s, cx, cy)[1] + 24
+    shift = 7 if live else 0
+    out.append(label(cx + shift, by, sub, ssize, "#8c9bbd", font=MONO, weight="500"))
+    if live:
+        lx = cx - len(sub) * ssize * 0.3 - 6
+        out.append(f'<circle cx="{lx:.1f}" cy="{by - 4:.1f}" r="3.6" fill="#34d399">'
+                   f'<animate attributeName="opacity" values="1;.25;1" dur="2.2s" begin="{begin}s" repeatCount="indefinite"/>'
+                   f'<animate attributeName="r" values="3.6;5.4;3.6" dur="2.2s" begin="{begin}s" repeatCount="indefinite"/></circle>')
+    return "".join(out)
+
+
+def clients():
+    W, H = 1200, 520
+    o = [svg_open(W, H), defs_common(), card(W, H, "glowGreen", "glowA"), stars(W, H, 40, seed=131)]
+    o.append(label(600, 50, "LIVE CLIENT WORK — SHIPPED AND IN PRODUCTION", 17, "#bbf7d0", ls="3.5"))
+    o.append(label(600, 76, "six businesses running on sites I built · travel, industrial, packaging, D2C", 12.5, "#8093b8", font=MONO))
+
+    sites = [
+        ("FindUrTrip", "travel · tours", "#8b5cf6"),
+        ("SCE Boiler Spares", "boiler spares", "#22d3ee"),
+        ("KBC Global", "private-label brands", "#f472b6"),
+        ("BLS Packaging", "bottles · caps", "#38bdf8"),
+        ("Shree Har Pkg.", "bag-closing machines", "#a855f7"),
+        ("TT Marketing", "weighing systems", "#34d399"),
+    ]
+    s = 23.0
+    for i, (name, sub, col) in enumerate(sites):
+        cx = 300 + (i % 3) * 300
+        cy = 172 + (i // 3) * 172
+        o.append(f'<g>{float_anim(6, 4.4 + (i % 4) * 0.5, i * 0.35)}'
+                 f'{screen_card(cx, cy, 4.8, 4.8, 1.2, col, s, f"c{i}", name, sub, tsize=11.5, live=True, shine_dur=5.5 + i * 0.4, begin=i * 0.6)}</g>')
+
+    o.append(chip(340, 480, "REAL BUSINESSES · REAL TRAFFIC", "#34d399", dur=3.6))
+    o.append(chip(680, 480, "DESIGN + BUILD + DEPLOY", "#8b5cf6", dur=4.1))
+    o.append(chip(960, 480, "OWNED END TO END", "#22d3ee", dur=3.9))
+    o.append('</svg>')
+    return "".join(o)
+
+
+def demos():
+    W, H = 1200, 600
+    o = [svg_open(W, H), defs_common(), card(W, H, "glowA", "glowB"), stars(W, H, 45, seed=173)]
+    o.append(label(600, 50, "DEMO SITES — ONE PER INDUSTRY, BUILT TO SHOW CLIENTS", 17, "#e9d5ff", ls="3"))
+    o.append(label(600, 76, "each one a full build: layout, copy, responsive pass, deploy", 12.5, "#8093b8", font=MONO))
+
+    demos_list = [
+        ("Healthcare", "Sanjeevani", "#f472b6"), ("Dental", "ARIA Studio", "#22d3ee"),
+        ("Fitness", "Forge Gym", "#f59e0b"), ("Salon", "Lumiere", "#a855f7"),
+        ("Legal", "Mehta + Kapadia", "#38bdf8"), ("Architecture", "Angan", "#8b5cf6"),
+        ("Real Estate", "Aavas Realty", "#34d399"), ("Education", "Aakash Intl.", "#6366f1"),
+        ("Restaurant", "Angan Kitchen", "#fb7185"), ("Events", "Mehr Events", "#c084fc"),
+        ("E-commerce", "Apna Bazar", "#2dd4bf"),
+    ]
+    s = 18.0
+    n = len(demos_list)
+    cycle = n * 0.9
+    rows = [(4, 168), (4, 316), (3, 464)]
+    idx = 0
+    for count, cy in rows:
+        span = 250 if count == 4 else 250
+        x0 = 600 - (count - 1) * span / 2
+        for k in range(count):
+            name, proj, col = demos_list[idx]
+            cx = x0 + k * span
+            a = idx / n
+            pulse = (f'<animate attributeName="opacity" values="0;0;0.5;0;0" '
+                     f'keyTimes="0;{a:.3f};{a+0.028:.3f};{a+0.075:.3f};1" dur="{cycle:.1f}s" repeatCount="indefinite"/>')
+            glow = (f'<circle cx="{cx}" cy="{cy+16}" r="86" fill="{col}" opacity="0">{pulse}</circle>')
+            o.append(glow)
+            o.append(f'<g>{float_anim(5, 4.2 + (idx % 5) * 0.4, idx * 0.28)}'
+                     f'{screen_card(cx, cy, 3.7, 3.7, 0.9, col, s, f"d{idx}", name, proj, tsize=10, ssize=9.5, shine_dur=6.0 + idx * 0.3, begin=idx * 0.5)}</g>')
+            idx += 1
+
+    o.append(chip(392, 556, "16 INDUSTRIES", "#8b5cf6", dur=3.7))
+    o.append(chip(600, 556, "MOBILE-FIRST", "#22d3ee", dur=4.2))
+    o.append(chip(818, 556, "SHIPPED LIVE", "#f472b6", dur=3.9))
+    o.append('</svg>')
+    return "".join(o)
+
+
 files = {
+    "clients-3d.svg": clients(),
+    "demos-3d.svg": demos(),
     "dhanrakshak-3d.svg": dhanrakshak(),
     "driftlock-3d.svg": driftlock(),
     "hero-3d.svg": hero(),

@@ -21,7 +21,7 @@ I care about shipping things that actually work — clean architecture, producti
 
 - 🔭 **Currently building:** FirstBookit — a live booking SaaS (Next.js · Express · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, Razorpay payments, revenue analytics
 - 🤖 **Exploring:** AI-powered products using LLM APIs (Groq, Anthropic/Claude)
-- 🏗️ **Shipped:** 25+ production features on a live SaaS + 19 demo & client sites across 16 industries
+- 🏗️ **Shipped:** 25+ production features on a live SaaS · **6 live client websites** · 19+ builds across 16 industries
 - 🌱 **Deepening:** Data Structures & Algorithms (Java) and system-design fundamentals
 - 📫 **Reach me:** het@buildbyhet.me · [buildbyhet.me](https://buildbyhet.me)
 
@@ -220,25 +220,42 @@ flowchart LR
 
 ---
 
-## 🌐 Demo & Client Projects
+## 🤝 Client Work — Live in Production
 
-> 19+ websites designed and built across 16 industries — a mix of live client work and portfolio demos.
+> Six real businesses running on sites I designed, built and deployed. Each one is a paying client's public front door, not a portfolio piece.
+
+<img width="100%" src="./assets/clients-3d.svg" alt="Live client work — six production websites" />
+
+| Business | What they do | Site |
+|----------|--------------|------|
+| **FindUrTrip** | Travel & tour packages | [findurtrip.org](https://www.findurtrip.org/) |
+| **SCE Boiler Spares** | Industrial boiler spares & supply | [sceboilerspares.com](https://www.sceboilerspares.com/) |
+| **KBC Global** | Private-label manufacturing & brand building (D2C) | [kbcglobal.in](https://www.kbcglobal.in/) |
+| **BLS Packaging** | Bottles, caps, closures & perfume packaging | [blspackaging.in](http://blspackaging.in/) |
+| **Shree Har Packaging** | Bag-closing machines & packaging equipment | [shreeharpackaging.in](https://www.shreeharpackaging.in/) |
+| **TT Marketing** | Industrial weighing systems & digital scales | [ttmarketing.co.in](https://ttmarketing.co.in/) |
+
+---
+
+## 🎨 Demo Sites — Built to Show Clients
+
+> One complete build per industry, made so a prospective client can see their own business before committing. Layout, copy, responsive pass and deploy — all of it real.
+
+<img width="100%" src="./assets/demos-3d.svg" alt="Demo sites — eleven industries" />
 
 | Industry | Project | Link |
 |----------|---------|------|
-| ✈️ Travel | FindUrTrip *(live client)* | [Visit](https://findurtrip.org/) |
-| 🏭 Industrial | SCE Boiler Spares *(live client)* | [Visit](https://sceboilerspares.vercel.app/) |
-| 🏥 Healthcare | Sanjeevani Hospital *(demo)* | [Visit](https://sanjeevani-hospital-blush.vercel.app/) |
-| 🦷 Dental | ARIA Dental Studio *(demo)* | [Visit](https://arhaclinic.netlify.app/) |
-| 🏋️ Fitness | Forge Gym *(demo)* | [Visit](https://forgegymdemo.netlify.app/) |
-| 💇 Salon & Beauty | Lumiere Salon *(demo)* | [Visit](https://lumieresalondemo.netlify.app/) |
-| ⚖️ Legal | Mehta & Kapadia *(demo)* | [Visit](https://lawdemowebsite.netlify.app/) |
-| 🏛️ Architecture | Angan Architecture *(demo)* | [Visit](https://anganarechitecture.netlify.app/) |
-| 🏢 Real Estate | Aavas Realty *(demo)* | [Visit](https://aavas-realty.vercel.app/) |
-| 🎓 Education | Aakash International School *(demo)* | [Visit](https://aakash-international-school.vercel.app/) |
-| 🍽️ Restaurant | Angan Restaurant *(demo)* | [Visit](https://angan-restaurant.vercel.app/) |
-| 🎉 Events | Mehr Events *(demo)* | [Visit](https://mehrevents.netlify.app/) |
-| 🛒 E-commerce | Apna Bazar *(demo)* | [Visit](https://apna-bazar-rust.vercel.app/) |
+| 🏥 Healthcare | Sanjeevani Hospital | [Visit](https://sanjeevani-hospital-blush.vercel.app/) |
+| 🦷 Dental | ARIA Dental Studio | [Visit](https://arhaclinic.netlify.app/) |
+| 🏋️ Fitness | Forge Gym | [Visit](https://forgegymdemo.netlify.app/) |
+| 💇 Salon & Beauty | Lumiere Salon | [Visit](https://lumieresalondemo.netlify.app/) |
+| ⚖️ Legal | Mehta & Kapadia | [Visit](https://lawdemowebsite.netlify.app/) |
+| 🏛️ Architecture | Angan Architecture | [Visit](https://anganarechitecture.netlify.app/) |
+| 🏢 Real Estate | Aavas Realty | [Visit](https://aavas-realty.vercel.app/) |
+| 🎓 Education | Aakash International School | [Visit](https://aakash-international-school.vercel.app/) |
+| 🍽️ Restaurant | Angan Restaurant | [Visit](https://angan-restaurant.vercel.app/) |
+| 🎉 Events | Mehr Events | [Visit](https://mehrevents.netlify.app/) |
+| 🛒 E-commerce | Apna Bazar | [Visit](https://apna-bazar-rust.vercel.app/) |
 
 <p align="center"><b>→ See all 19+ projects at <a href="https://buildbyhet.me">buildbyhet.me</a></b></p>
 
@@ -310,6 +327,8 @@ python3 assets/generate-3d-assets.py
 | [`ship-loop-3d.svg`](./assets/ship-loop-3d.svg) | plan → build → ship → measure → iterate, on a loop |
 | [`dhanrakshak-3d.svg`](./assets/dhanrakshak-3d.svg) | Four inputs into one on-device engine, inside a "nothing leaves the phone" boundary |
 | [`driftlock-3d.svg`](./assets/driftlock-3d.svg) | A repeating die field being swept, decoy matches fading, the true site locked at 0.43 px |
+| [`clients-3d.svg`](./assets/clients-3d.svg) | Six client sites as isometric browser windows, each with a live pulse and a shine sweep |
+| [`demos-3d.svg`](./assets/demos-3d.svg) | The demo wall — eleven industries, lit one at a time on a rolling cycle |
 
 </details>
 
