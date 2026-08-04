@@ -275,21 +275,14 @@ flowchart LR
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Het161&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Het's GitHub stats" />
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Het161&layout=compact&langs_count=6&theme=tokyonight&hide_border=true" alt="Top languages" />
-</div>
+<img width="100%" src="./assets/github-stats-3d.svg" alt="GitHub stats — repos, stars, followers and top languages" />
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Het161&theme=tokyonight&hide_border=true&ring=8B5CF6&fire=F85D7F&currStreakLabel=8B5CF6" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=Het161&theme=tokyonight&hide_border=true&ring=8B5CF6&fire=F85D7F&currStreakLabel=8B5CF6" alt="GitHub Streak" />
 </div>
 
 <div align="center">
   <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Het161&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Activity&color=8B5CF6&line=22D3EE&point=F472B6" alt="Contribution activity graph" />
-</div>
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Het161&theme=algolia&no-frame=true&no-bg=true&margin-w=8&column=7" alt="GitHub trophies" />
 </div>
 
 ---
@@ -313,10 +306,11 @@ flowchart LR
 
 The isometric scenes above (`hero`, `architecture`, `stack orbit`, `ship loop`) are **hand-generated animated SVGs** — no images, no JavaScript, no external libraries. Every cube is projected with real isometric math and animated with native SVG `<animate>` / `<animateMotion>`, so they run anywhere GitHub renders an image.
 
-They're reproducible: [`assets/generate-3d-assets.py`](./assets/generate-3d-assets.py) rebuilds all four files.
+They're reproducible: [`assets/generate-3d-assets.py`](./assets/generate-3d-assets.py) rebuilds the scenes, and [`assets/generate-stats-card.py`](./assets/generate-stats-card.py) rebuilds the stats card from the GitHub API — no third-party image host that can go down.
 
 ```bash
 python3 assets/generate-3d-assets.py
+python3 assets/generate-stats-card.py Het161
 ```
 
 | Asset | What it shows |
@@ -329,6 +323,7 @@ python3 assets/generate-3d-assets.py
 | [`driftlock-3d.svg`](./assets/driftlock-3d.svg) | A repeating die field being swept, decoy matches fading, the true site locked at 0.43 px |
 | [`clients-3d.svg`](./assets/clients-3d.svg) | Six client sites as isometric browser windows, each with a live pulse and a shine sweep |
 | [`demos-3d.svg`](./assets/demos-3d.svg) | The demo wall — eleven industries, lit one at a time on a rolling cycle |
+| [`github-stats-3d.svg`](./assets/github-stats-3d.svg) | Live repo/star/follower counts and a 3D language chart, regenerated daily by [`stats.yml`](./.github/workflows/stats.yml) |
 
 </details>
 
