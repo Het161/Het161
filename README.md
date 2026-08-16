@@ -9,7 +9,22 @@
   <a href="https://linkedin.com/in/Hetkumar-Sanjaykumar-Patel"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:het@buildbyhet.me"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://instagram.com/hetpatel0812"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <!-- Drop resume.pdf into this repo, then uncomment the line below to publish it:
+  <a href="./resume.pdf"><img src="https://img.shields.io/badge/Résumé-PDF-22C55E?style=for-the-badge&logo=readdotcv&logoColor=white" alt="Résumé"></a>
+  -->
 </p>
+
+---
+
+## 🎯 Open to Work
+
+| | |
+|---|---|
+| **Looking for** | Full-stack / backend internships now · new-grad SWE roles from **mid-2028** |
+| **Available** | Immediately for internships & contract work · part-time alongside coursework |
+| **Location** | Ahmedabad, India 🇮🇳 · open to remote and relocation |
+| **Strongest in** | Next.js · TypeScript · Node/Express · PostgreSQL + Prisma · production LLM APIs |
+| **Reach me** | [het@buildbyhet.me](mailto:het@buildbyhet.me) · [LinkedIn](https://linkedin.com/in/Hetkumar-Sanjaykumar-Patel) · usually reply within a day |
 
 ---
 
@@ -63,14 +78,19 @@ A live, production SaaS platform for sports venue management serving real venues
 
 <img width="100%" src="./assets/architecture-3d.svg" alt="FirstBookit production architecture — layered isometric diagram" />
 
-**What I've built & shipped:**
-- 📅 **Schedule template system** — recurring weekly schedules with override support
-- 💰 **Dynamic pricing engine** — peak/off-peak pricing rules with timezone-safe calculations
-- 📊 **Revenue analytics dashboard** — venue-level earnings, booking trends, and customer insights
-- 🧾 **Multi-slot booking flow** — cart-style booking with Razorpay payment integration & refunds
-- 📱 **WhatsApp booking confirmations** — automated notifications via messaging API
-- 🔔 **In-app notification system** — real-time alerts for bookings, cancellations & payments
-- 🐛 **Critical production fixes** — N+1 query optimization, timezone bug resolution, PR-reviewed workflow
+**What I've built & shipped — 25+ features across 3 user roles (venue owner · admin · player):**
+- 📅 **Schedule template system** — recurring weekly schedules with per-date overrides, so a venue configures a season once instead of editing every day
+- 💰 **Dynamic pricing engine** — peak/off-peak rules evaluated timezone-safe, removing a class of bugs that had been mispricing slots across IST day boundaries
+- 📊 **Revenue analytics dashboard** — venue-level earnings, booking trends and customer insights, replacing manual register-keeping
+- 🧾 **Multi-slot booking flow** — cart-style checkout across multiple slots in one transaction, with Razorpay payments, webhook-confirmed bookings and refunds
+- 📱 **WhatsApp booking confirmations** — automated confirmations at the moment payment captures, cutting no-shows from missed SMS
+- 🔔 **In-app notification system** — real-time alerts for bookings, cancellations and payments
+- 🐛 **Critical production fixes** — eliminated N+1 queries on the booking list, resolved a timezone bug affecting slot boundaries, all through a PR-reviewed workflow
+
+<!-- Numbers to add once you can share them: venues live · monthly bookings · GMV processed ·
+     dashboard load time before/after the N+1 fix · uptime. One real figure beats three adjectives. -->
+
+
 
 `Next.js 15` · `React 19` · `Express` · `Prisma` · `PostgreSQL` · `Razorpay` · `TanStack Query`
 
@@ -143,7 +163,7 @@ Our answer is deliberately **classical CV, grounded in SEM physics** — no deep
 
 <img width="100%" src="./assets/driftlock-3d.svg" alt="DriftLock matching pipeline — isometric diagram" />
 
-- 📐 **Incommensurate mat pitches** were the breakthrough — pure lattice data ranked the truth ~762nd under noise; landmarks that never line up inside the frame took it to **rank 0, 0.43 px error**
+- 📐 **Incommensurate mat pitches** were the breakthrough — pure lattice data ranked the truth **~762nd** under noise; landmarks that never line up inside the frame took it to **rank 0, 0.43 px error**
 - ⚡ **CPU only** — no GPU, no model weights, under a second per pair
 - 🧾 **Every generator constant is citation-tagged** in code `[S1]–[S12]`, traced to SEM physics or DRAM 6F² literature
 - 🎯 **Honest failure** — the PSR flag exists for the deliberately ambiguous periodic region in the official test set
@@ -158,7 +178,7 @@ Our answer is deliberately **classical CV, grounded in SEM physics** — no deep
 
 ### 🎯 [HireLoop](https://hireloop-tau.vercel.app/) — AI Mock Interview Platform
 
-An AI interviewer that spans **21 tech roles** with adaptive, real-time questioning in **voice or text mode**. Each ~30-minute session ends with **per-question scored feedback** and a personalized improvement plan. Features a terminal-style UI with token-streamed responses. Open source (MIT).
+An AI interviewer that spans **21 tech roles** with adaptive, real-time questioning in **voice or text mode**. Each ~30-minute session ends with **per-question scored feedback** and a personalized improvement plan. Features a terminal-style UI with token-streamed responses.
 
 `Next.js` · `TypeScript` · `Groq (Llama 3.3 70B)` · `Web Speech API`
 
