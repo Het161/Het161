@@ -1,8 +1,7 @@
-<img width="100%" src="./assets/hero-3d.svg" alt="Het Patel — Full-Stack Developer" />
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=8B5CF6&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%C2%B7+MERN+%2B+Next.js;Building+FirstBookit+%E2%80%94+Live+Booking+SaaS;AI-Powered+Products+%C2%B7+Groq+%2B+Claude;Ship+it.+Iterate.+Ship+again." />
-</p>
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/hero-3d.svg">
+  <img width="100%" src="./assets/png/hero-3d.png" alt="Het Patel — Full-Stack Developer" />
+</picture>
 
 <p align="center">
   <a href="https://buildbyhet.me"><img src="https://img.shields.io/badge/Portfolio-buildbyhet.me-8B5CF6?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"></a>
@@ -50,13 +49,19 @@ I care about shipping things that actually work — clean architecture, producti
 - 🤖 **AI Integration** — building products on top of LLM APIs (Groq, Claude) with streaming, RAG, and real-time interaction
 - 🚀 **SaaS Product Development** — working on a live production platform with real users, real payments, and real deadlines
 
-<img width="100%" src="./assets/ship-loop-3d.svg" alt="Ship it. Iterate. Ship again." />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/ship-loop-3d.svg">
+  <img width="100%" src="./assets/png/ship-loop-3d.png" alt="Ship it. Iterate. Ship again." />
+</picture>
 
 ---
 
 ## 🛠️ Tech Stack
 
-<img width="100%" src="./assets/stack-orbit-3d.svg" alt="Tech stack in orbit" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/stack-orbit-3d.svg">
+  <img width="100%" src="./assets/png/stack-orbit-3d.png" alt="Tech stack in orbit" />
+</picture>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,prisma,tailwind,python,git,github,vercel,postman&perline=8" alt="Tech Stack" />
@@ -76,7 +81,10 @@ I care about shipping things that actually work — clean architecture, producti
 
 A live, production SaaS platform for sports venue management serving real venues and players. I work as a developer on the team, owning features end-to-end.
 
-<img width="100%" src="./assets/architecture-3d.svg" alt="FirstBookit production architecture — layered isometric diagram" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/architecture-3d.svg">
+  <img width="100%" src="./assets/png/architecture-3d.png" alt="FirstBookit production architecture — layered isometric diagram" />
+</picture>
 
 **What I've built & shipped — 25+ features across 3 user roles (venue owner · admin · player):**
 - 📅 **Schedule template system** — recurring weekly schedules with per-date overrides, so a venue configures a season once instead of editing every day
@@ -89,8 +97,6 @@ A live, production SaaS platform for sports venue management serving real venues
 
 <!-- Numbers to add once you can share them: venues live · monthly bookings · GMV processed ·
      dashboard load time before/after the N+1 fix · uptime. One real figure beats three adjectives. -->
-
-
 
 `Next.js 15` · `React 19` · `Express` · `Prisma` · `PostgreSQL` · `Razorpay` · `TanStack Query`
 
@@ -137,7 +143,10 @@ A scam guardian for the people UPI brought online and nobody built for. It flags
 
 The part I care about most: **the AI never decides what is a scam.** Rules plus a LightGBM model score every known tactic and set the verdict; the local model only translates that verdict into her words, with the actual RBI/NPCI advisory attached. That's why a small offline model can be trusted here.
 
-<img width="100%" src="./assets/dhanrakshak-3d.svg" alt="DhanRakshak on-device detection pipeline — isometric diagram" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/dhanrakshak-3d.svg">
+  <img width="100%" src="./assets/png/dhanrakshak-3d.png" alt="DhanRakshak on-device detection pipeline — isometric diagram" />
+</picture>
 
 - 📴 **Offline-first** — real engine exported to the device; verdict in ~150 ms, nothing uploaded
 - 🗣️ **Gujarati-first** — language is the first screen, every verdict can be spoken, elder mode throughout
@@ -161,7 +170,10 @@ Built for the **Drift-Sense** problem statement (Applied Materials): a wafer ins
 
 Our answer is deliberately **classical CV, grounded in SEM physics** — no deep learning, nothing in the judges' as-is run that can break. We generate DRAM-style data with real SEM noise (Poisson + Gaussian, edge brightening), then localize with a multi-scale ZNCC sweep, the official centre rule, and a sub-pixel fit. Output is `(x, y)` **plus a PSR confidence** — when a field is genuinely ambiguous, we say so instead of guessing.
 
-<img width="100%" src="./assets/driftlock-3d.svg" alt="DriftLock matching pipeline — isometric diagram" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/driftlock-3d.svg">
+  <img width="100%" src="./assets/png/driftlock-3d.png" alt="DriftLock matching pipeline — isometric diagram" />
+</picture>
 
 - 📐 **Incommensurate mat pitches** were the breakthrough — pure lattice data ranked the truth **~762nd** under noise; landmarks that never line up inside the frame took it to **rank 0, 0.43 px error**
 - ⚡ **CPU only** — no GPU, no model weights, under a second per pair
@@ -244,7 +256,10 @@ flowchart LR
 
 > Six real businesses running on sites I designed, built and deployed. Each one is a paying client's public front door, not a portfolio piece.
 
-<img width="100%" src="./assets/clients-3d.svg" alt="Live client work — six production websites" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/clients-3d.svg">
+  <img width="100%" src="./assets/png/clients-3d.png" alt="Live client work — six production websites" />
+</picture>
 
 | Business | What they do | Site |
 |----------|--------------|------|
@@ -261,7 +276,10 @@ flowchart LR
 
 > One complete build per industry, made so a prospective client can see their own business before committing. Layout, copy, responsive pass and deploy — all of it real.
 
-<img width="100%" src="./assets/demos-3d.svg" alt="Demo sites — eleven industries" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/demos-3d.svg">
+  <img width="100%" src="./assets/png/demos-3d.png" alt="Demo sites — eleven industries" />
+</picture>
 
 | Industry | Project | Link |
 |----------|---------|------|
@@ -285,9 +303,8 @@ flowchart LR
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season-animate.svg">
-    <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+    <source media="(min-width: 768px)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
+    <img src="./profile-3d-contrib/profile-season.svg" alt="3D Contribution Graph" />
   </picture>
 </div>
 
@@ -295,7 +312,10 @@ flowchart LR
 
 ## 📊 GitHub Stats
 
-<img width="100%" src="./assets/github-stats-3d.svg" alt="GitHub stats — repos, stars, followers and top languages" />
+<picture>
+  <source media="(min-width: 768px)" srcset="./assets/github-stats-3d.svg">
+  <img width="100%" src="./assets/png/github-stats-3d.png" alt="GitHub stats — repos, stars, followers and top languages" />
+</picture>
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Het161&theme=tokyonight&hide_border=true&ring=8B5CF6&fire=F85D7F&currStreakLabel=8B5CF6" alt="GitHub Streak" />
