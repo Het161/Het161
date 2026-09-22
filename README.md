@@ -36,6 +36,7 @@ I care about shipping things that actually work — clean architecture, producti
 - 🔭 **Currently building:** FirstBookit — a live booking SaaS (Next.js · Express · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, Razorpay payments, revenue analytics
 - 🤖 **Exploring:** AI-powered products using LLM APIs (Groq, Anthropic/Claude)
 - 🏗️ **Shipped:** 25+ production features on a live SaaS · **6 live client websites** · 19+ builds across 16 industries
+- 🤝 **Building with teams:** shared repos and PR-reviewed workflows across Smart India Hackathon 2026, the Gujarat Police Innovation Challenge and SEMICON India — including commits into teammates' repositories, not just my own
 - 🌱 **Deepening:** Data Structures & Algorithms (Java) and system-design fundamentals
 - 📫 **Reach me:** het@buildbyhet.me · [buildbyhet.me](https://buildbyhet.me)
 
@@ -186,7 +187,54 @@ Our answer is deliberately **classical CV, grounded in SEM physics** — no deep
 
 ---
 
+## 🛰️ DrishtiNet — Cross-Camera Vehicle Forensics for Gujarat Police
+
+<p>
+  <a href="https://github.com/Het161/DrishtiNet"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source"></a>
+  <img src="https://img.shields.io/badge/Gujarat%20Police%20Innovation%20Challenge-2026-2563EB?style=for-the-badge" alt="Gujarat Police Innovation Challenge 2026">
+  <img src="https://img.shields.io/badge/runs-fully%20offline-34D399?style=for-the-badge" alt="Runs fully offline">
+</p>
+
+My most-worked project of 2026. A centralised CCTV registry with GIS and vehicle analytics that reconstructs a vehicle's route **across cameras**, constrained by real geography rather than guesswork — watchlist alerts in **under 50 ms**, forensic search in **under 150 ms**, running **fully offline** inside a police network.
+
+The part I'm proudest of isn't a feature: we built it on measurements taken from the organisers' own camera feeds, and the submission states plainly **why ANPR cannot work at their camera geometry** instead of demoing a number we couldn't hit in the field.
+
+`GIS` · `computer vision` · `cross-camera re-identification` · `offline deployment`
+
+---
+
+## 🏛️ SatarkAI — Fraud Detection for India's MPLADS Scheme
+
+<p>
+  <a href="https://github.com/Het161/satarkai-mplads"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source"></a>
+  <img src="https://img.shields.io/badge/Smart%20India%20Hackathon-2026%20·%20PS%2026102-F97316?style=for-the-badge" alt="Smart India Hackathon 2026, PS 26102">
+</p>
+
+Anomaly, fraud and inefficiency detection across MPLADS public-spending data — the Ministry of Statistics problem statement (PS 26102) at **Smart India Hackathon 2026**, built with Team Technoverse.
+
+`anomaly detection` · `fraud analytics` · `public-spending data`
+
+---
+
 ## 🤖 Featured Projects
+
+### 🌍 [Globetrotter](https://github.com/Het161/globetrotter) — Multi-City Trip Planner
+
+A planner where **the route, the calendar and the money are the same object** — change the itinerary and the budget and schedule follow, instead of drifting out of sync across three separate screens.
+
+`Next.js 16` · `React 19` · `PostgreSQL` · `Prisma 6`
+
+### 🔨 [mocksmith](https://github.com/Het161/mocksmith) — json-server v1, Rebuilt with Zero Dependencies
+
+A drop-in reimplementation of json-server using **only the Node standard library** — no dependency tree at all — with live WebSocket updates and a built-in dashboard on top.
+
+`Node stdlib only` · `WebSocket` · `REST`
+
+### 🎛️ [baton](https://github.com/Het161/baton) — On-Device AI, Zero Cloud
+
+Turns phone captures into finished work with a **local LLM running in the browser** — nothing leaves the device, and it lands on your desk.
+
+`WebLLM` · `Next.js` · `React Three Fiber`
 
 ### 🎯 [HireLoop](https://hireloop-tau.vercel.app/) — AI Mock Interview Platform
 
