@@ -35,7 +35,7 @@ I care about shipping things that actually work — clean architecture, producti
 
 - 🔭 **Currently building:** FirstBookit — a live booking SaaS (Next.js · Express · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, Razorpay payments, revenue analytics
 - 🤖 **Exploring:** AI-powered products using LLM APIs (Groq, Anthropic/Claude)
-- 🏗️ **Shipped:** 25+ production features on a live SaaS · **6 live client websites** · 19+ builds across 16 industries
+- 🏗️ **Shipped:** 25+ production features on a live SaaS · **7 live client websites** · 19+ builds across 16 industries
 - 🤝 **Building with teams:** shared repos and PR-reviewed workflows across Smart India Hackathon 2026, the Gujarat Police Innovation Challenge and SEMICON India — including commits into teammates' repositories, not just my own
 - 🌱 **Deepening:** Data Structures & Algorithms (Java) and system-design fundamentals
 - 📫 **Reach me:** het@buildbyhet.me · [buildbyhet.me](https://buildbyhet.me)
@@ -302,7 +302,7 @@ flowchart LR
 
 ## 🤝 Client Work — Live in Production
 
-> Six real businesses running on sites I designed, built and deployed. Each one is a paying client's public front door, not a portfolio piece.
+> Seven real businesses running on sites I designed, built and deployed. Each one is a paying client's public front door, not a portfolio piece.
 
 <picture>
   <source media="(min-width: 768px)" srcset="./assets/clients-3d.svg">
@@ -313,6 +313,7 @@ flowchart LR
 |----------|--------------|------|
 | **FindUrTrip** | Travel & tour packages | [findurtrip.org](https://www.findurtrip.org/) |
 | **SCE Boiler Spares** | Industrial boiler spares & supply | [sceboilerspares.com](https://www.sceboilerspares.com/) |
+| **Tula Trans Electricals** | Transformer manufacture & repair, 11–66 kV — ISO 9001:2015, BIS licensed, est. 1988 | [tulatranselectricals.com](https://www.tulatranselectricals.com/) |
 | **KBC Global** | Private-label manufacturing & brand building (D2C) | [kbcglobal.in](https://www.kbcglobal.in/) |
 | **BLS Packaging** | Bottles, caps, closures & perfume packaging | [blspackaging.in](http://blspackaging.in/) |
 | **Shree Har Packaging** | Bag-closing machines & packaging equipment | [shreeharpackaging.in](https://www.shreeharpackaging.in/) |

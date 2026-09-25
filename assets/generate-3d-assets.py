@@ -612,22 +612,29 @@ def clients():
     W, H = 1200, 520
     o = [svg_open(W, H), defs_common(), card(W, H, "glowGreen", "glowA"), stars(W, H, 40, seed=131)]
     o.append(label(600, 50, "LIVE CLIENT WORK — SHIPPED AND IN PRODUCTION", 17, "#bbf7d0", ls="3.5"))
-    o.append(label(600, 76, "six businesses running on sites I built · travel, industrial, packaging, D2C", 12.5, "#8093b8", font=MONO))
+    o.append(label(600, 76, "seven businesses running on sites I built · transformers, travel, industrial, packaging, D2C", 12.5, "#8093b8", font=MONO))
 
     sites = [
         ("FindUrTrip", "travel · tours", "#8b5cf6"),
         ("SCE Boiler Spares", "boiler spares", "#22d3ee"),
+        ("Tula Trans", "transformers 11-66 kV", "#f59e0b"),
         ("KBC Global", "private-label brands", "#f472b6"),
         ("BLS Packaging", "bottles · caps", "#38bdf8"),
         ("Shree Har Pkg.", "bag-closing machines", "#a855f7"),
         ("TT Marketing", "weighing systems", "#34d399"),
     ]
-    s = 23.0
-    for i, (name, sub, col) in enumerate(sites):
-        cx = 300 + (i % 3) * 300
-        cy = 172 + (i // 3) * 172
-        o.append(f'<g>{float_anim(6, 4.4 + (i % 4) * 0.5, i * 0.35)}'
-                 f'{screen_card(cx, cy, 4.8, 4.8, 1.2, col, s, f"c{i}", name, sub, tsize=11.5, live=True, shine_dur=5.5 + i * 0.4, begin=i * 0.6)}</g>')
+    s = 20.0
+    rows = [(4, 178), (3, 344)]
+    i = 0
+    for count, cy in rows:
+        span = 273 if count == 4 else 273
+        x0 = 600 - (count - 1) * span / 2
+        for k in range(count):
+            name, sub, col = sites[i]
+            cx = x0 + k * span
+            o.append(f'<g>{float_anim(6, 4.4 + (i % 4) * 0.5, i * 0.35)}'
+                     f'{screen_card(cx, cy, 4.6, 4.6, 1.1, col, s, f"c{i}", name, sub, tsize=10.5, ssize=9.5, live=True, shine_dur=5.5 + i * 0.4, begin=i * 0.6)}</g>')
+            i += 1
 
     o.append(chip(340, 480, "REAL BUSINESSES · REAL TRAFFIC", "#34d399", dur=3.6))
     o.append(chip(680, 480, "DESIGN + BUILD + DEPLOY", "#8b5cf6", dur=4.1))
