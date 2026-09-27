@@ -6,18 +6,21 @@ SVG, so README.md serves the .svg above 768px and these PNGs everywhere else.
 Re-run after changing any artwork:
 
     python3 assets/generate-3d-assets.py
-    python3 assets/make-png-fallbacks.py
+    python3 assets/make-png-fallbacks.py                   # every scene
+    python3 assets/make-png-fallbacks.py hero-3d clients-3d  # just these
 
 macOS only — uses qlmanage (render), sips (crop/resize) and pngquant (compress).
 """
 
-import os, re, subprocess
+import os, re, subprocess, sys
 SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SRC, "png")
 os.makedirs(OUT, exist_ok=True)
 W = 1600
+ONLY = set(sys.argv[1:])
 for n in sorted(os.listdir(SRC)):
     if not n.endswith(".svg"): continue
+    if ONLY and n[:-4] not in ONLY: continue
     src = open(os.path.join(SRC, n)).read()
     m = re.search(r'viewBox="0 0 (\d+) (\d+)"', src)
     w, h = int(m.group(1)), int(m.group(2))

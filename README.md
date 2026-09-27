@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://buildbyhet.me"><img src="https://img.shields.io/badge/Portfolio-buildbyhet.me-8B5CF6?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"></a>
-  <a href="https://linkedin.com/in/Hetkumar-Sanjaykumar-Patel"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://www.linkedin.com/in/hetkumar-sanjaykumar-patel-54730933b/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:het@buildbyhet.me"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://instagram.com/hetpatel0812"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
   <!-- Drop resume.pdf into this repo, then uncomment the line below to publish it:
@@ -23,20 +23,20 @@
 | **Available** | Immediately for internships & contract work · part-time alongside coursework |
 | **Location** | Ahmedabad, India 🇮🇳 · open to remote and relocation |
 | **Strongest in** | Next.js · TypeScript · Node/Express · PostgreSQL + Prisma · production LLM APIs |
-| **Reach me** | [het@buildbyhet.me](mailto:het@buildbyhet.me) · [LinkedIn](https://linkedin.com/in/Hetkumar-Sanjaykumar-Patel) · usually reply within a day |
+| **Reach me** | [het@buildbyhet.me](mailto:het@buildbyhet.me) · [LinkedIn](https://www.linkedin.com/in/hetkumar-sanjaykumar-patel-54730933b/) · usually reply within a day |
 
 ---
 
 ## 🚀 About Me
 
-I'm a **Computer Engineering student** and **full-stack developer** working on **[FirstBookit](https://firstbookit.in)** — a live, multi-role sports-venue booking SaaS — where I own features end-to-end: from schema design and API architecture to frontend implementation and production deployment.
+I'm a **Computer Engineering student** and **full-stack developer**. I recently completed a **Software Developer internship at [FirstBookIt](https://firstbookit.in)** — a live sports-venue booking product on the web, Google Play and the App Store — where I owned modules end to end: the booking engine, split payments, the owner/manager/admin portals, auth and backend performance.
 
 I care about shipping things that actually work — clean architecture, production deployments, and code that solves a real problem, not just a demo.
 
-- 🔭 **Currently building:** FirstBookit — a live booking SaaS (Next.js · Express · Prisma · PostgreSQL) — scheduling, dynamic pricing, multi-role auth, Razorpay payments, revenue analytics
+- 🔭 **Right now:** preparing for the Odoo × LDCE Hackathon '26 24-hour finale (3–4 Oct), and building **Vajra** — an offline, autonomous find → patch → prove security system for Terrier Cyber Quest 2026
 - 🤖 **Exploring:** AI-powered products using LLM APIs (Groq, Anthropic/Claude)
-- 🏗️ **Shipped:** 25+ production features on a live SaaS · **7 live client websites** · 19+ builds across 16 industries
-- 🤝 **Building with teams:** shared repos and PR-reviewed workflows across Smart India Hackathon 2026, the Gujarat Police Innovation Challenge and SEMICON India — including commits into teammates' repositories, not just my own
+- 🏗️ **Shipped:** 25+ production features in a completed internship · **7 live client websites** · 19+ builds across 16 industries
+- 🤝 **Building with teams:** on-site finals at Odoo India HQ (Odoo Hackathon 2026), ISRO's Bharatiya Antariksh Hackathon, Smart India Hackathon 2026, the Gujarat Police Innovation Challenge and SEMICON India — shared repos, PR-reviewed workflows, commits into teammates' repositories
 - 🌱 **Deepening:** Data Structures & Algorithms (Java) and system-design fundamentals
 - 📫 **Reach me:** het@buildbyhet.me · [buildbyhet.me](https://buildbyhet.me)
 
@@ -48,7 +48,7 @@ I care about shipping things that actually work — clean architecture, producti
 - 🎨 **Frontend Engineering** — responsive, modern UIs with React, Next.js & Tailwind CSS; performance-focused and mobile-first
 - 🏗️ **Backend & Architecture** — multi-role JWT auth, SaaS products, scheduled jobs, payment integrations, serverless & database design
 - 🤖 **AI Integration** — building products on top of LLM APIs (Groq, Claude) with streaming, RAG, and real-time interaction
-- 🚀 **SaaS Product Development** — working on a live production platform with real users, real payments, and real deadlines
+- 🚀 **SaaS Product Development** — shipped on a live production platform with real users, real payments and real deadlines
 
 <picture>
   <source media="(min-width: 768px)" srcset="./assets/ship-loop-3d.svg">
@@ -78,23 +78,25 @@ I care about shipping things that actually work — clean architecture, producti
 
 ## 💼 Professional Work
 
-### 🏟️ [FirstBookit](https://firstbookit.in) — Sports Venue Booking SaaS · Developer
+### 🏟️ [FirstBookIt](https://firstbookit.in) — Software Developer Intern · Completed
 
-A live, production SaaS platform for sports venue management serving real venues and players. I work as a developer on the team, owning features end-to-end.
+Full-stack across the **web app, mobile app and backend** of a live sports-venue booking product — live on the web, **Google Play** and the **App Store**. I owned modules end to end, and left with an appreciation letter from the team.
 
 <picture>
   <source media="(min-width: 768px)" srcset="./assets/architecture-3d.svg">
   <img width="100%" src="./assets/png/architecture-3d.png" alt="FirstBookit production architecture — layered isometric diagram" />
 </picture>
 
-**What I've built & shipped — 25+ features across 3 user roles (venue owner · admin · player):**
-- 📅 **Schedule template system** — recurring weekly schedules with per-date overrides, so a venue configures a season once instead of editing every day
-- 💰 **Dynamic pricing engine** — peak/off-peak rules evaluated timezone-safe, removing a class of bugs that had been mispricing slots across IST day boundaries
-- 📊 **Revenue analytics dashboard** — venue-level earnings, booking trends and customer insights, replacing manual register-keeping
-- 🧾 **Multi-slot booking flow** — cart-style checkout across multiple slots in one transaction, with Razorpay payments, webhook-confirmed bookings and refunds
-- 📱 **WhatsApp booking confirmations** — automated confirmations at the moment payment captures, cutting no-shows from missed SMS
-- 🔔 **In-app notification system** — real-time alerts for bookings, cancellations and payments
-- 🐛 **Critical production fixes** — eliminated N+1 queries on the booking list, resolved a timezone bug affecting slot boundaries, all through a PR-reviewed workflow
+**What I shipped:**
+- 🧾 **Core booking engine** — guest booking, multi-slot booking and Razorpay payment integration, with webhook-confirmed bookings and refunds
+- 💸 **Split payments** — several players pay for one booking through shared payment links, with payment holds and automatic refunds on expiry
+- 🗂️ **Owner, Manager and Admin portals** — slot and pricing management, payouts, coupons, approval workflows and analytics
+- 📅 **Schedule templates & dynamic pricing** — recurring weekly schedules with per-date overrides; peak/off-peak rules calculated timezone-safe
+- 🏃 **Running-club module** — paid event registration and GPS-based run tracking
+- 🔐 **Auth & notifications** — email OTP and Google OAuth; scheduled reminders, WhatsApp booking confirmations and in-app alerts
+- ⚡ **Backend performance** — pagination, caching, database indexing and query optimisation, including eliminating N+1 queries and fixing a timezone bug on slot boundaries
+
+> The lesson that stuck: code behaves differently once real users and real money move through it — payment states that fail halfway, edge cases you never hit locally, and performance problems that only appear at scale.
 
 <!-- Numbers to add once you can share them: venues live · monthly bookings · GMV processed ·
      dashboard load time before/after the N+1 fix · uptime. One real figure beats three adjectives. -->

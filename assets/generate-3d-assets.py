@@ -202,22 +202,22 @@ def architecture():
     W, H = 1200, 820
     o = [svg_open(W, H), defs_common(), card(W, H), stars(W, H, 55, seed=19)]
     o.append(label(600, 48, "FIRSTBOOKIT — PRODUCTION ARCHITECTURE", 17, "#e9d5ff", ls="4"))
-    o.append(label(600, 74, "multi-role booking SaaS · Next.js 15 · Express · Prisma · PostgreSQL", 12.5, "#8093b8", font=MONO))
+    o.append(label(600, 74, "sports-venue booking product · Next.js 15 · Express · Prisma · PostgreSQL · Razorpay", 12.5, "#8093b8", font=MONO))
 
     s = 26.0
     PW, PD = 15, 6
     layers = [
         ("CLIENT",      "#8b5cf6", 212, [("Next.js 15 App", 0.4, 0.6, 4.4, 4.2, 1.5), ("React 19 UI", 5.6, 0.6, 4.0, 4.2, 1.1), ("TanStack Query", 10.4, 0.6, 4.2, 4.2, 0.9)]),
-        ("API LAYER",   "#6366f1", 368, [("Express REST", 0.4, 0.6, 4.4, 4.2, 1.5), ("JWT · 3 Roles", 5.6, 0.6, 4.0, 4.2, 1.2), ("node-cron Jobs", 10.4, 0.6, 4.2, 4.2, 0.9)]),
-        ("DOMAIN",      "#22d3ee", 524, [("Scheduling", 0.4, 0.6, 4.4, 4.2, 1.4), ("Dynamic Pricing", 5.6, 0.6, 4.0, 4.2, 1.4), ("Analytics", 10.4, 0.6, 4.2, 4.2, 1.0)]),
+        ("API LAYER",   "#6366f1", 368, [("Express REST", 0.4, 0.6, 4.4, 4.2, 1.5), ("OTP · OAuth", 5.6, 0.6, 4.0, 4.2, 1.2), ("Cron Reminders", 10.4, 0.6, 4.2, 4.2, 0.9)]),
+        ("DOMAIN",      "#22d3ee", 524, [("Booking Engine", 0.4, 0.6, 4.4, 4.2, 1.4), ("Split Payments", 5.6, 0.6, 4.0, 4.2, 1.4), ("Dynamic Pricing", 10.4, 0.6, 4.2, 4.2, 1.0)]),
         ("DATA + EDGE", "#a855f7", 680, [("PostgreSQL", 0.4, 0.6, 4.4, 4.2, 1.6), ("Prisma ORM", 5.6, 0.6, 4.0, 4.2, 1.0), ("Razorpay · WA", 10.4, 0.6, 4.2, 4.2, 1.2)]),
     ]
 
     notes = [
-        ["role-aware dashboards", "venue owner · admin · player"],
-        ["REST + JWT middleware", "scheduled jobs, timezone-safe"],
-        ["templates, overrides, slots", "peak / off-peak price rules"],
-        ["Prisma migrations · N+1 fixed", "Razorpay refunds · WhatsApp"],
+        ["owner · manager · admin portals", "web · Play Store · App Store"],
+        ["email OTP + Google OAuth", "scheduled reminders, timezone-safe"],
+        ["guest + multi-slot booking", "shared links · holds · auto-refunds"],
+        ["indexing · caching · N+1 fixed", "Razorpay · WhatsApp confirmations"],
     ]
     ox = 545 - (PW - PD) * KX * s / 2
     anchors = []  # per layer: list of (screen x, top y, bottom y)
@@ -264,7 +264,7 @@ def architecture():
     o.append("".join(body))
 
     # side stats
-    o.append(f'<g opacity=".9">{label(600, 796, "25+ shipped features  ·  real venues  ·  real payments  ·  live in production", 12, "#7c8db5", font=MONO)}</g>')
+    o.append(f'<g opacity=".9">{label(600, 796, "software developer intern  ·  25+ shipped features  ·  real users, real money moving", 12, "#7c8db5", font=MONO)}</g>')
     o.append('</svg>')
     return "".join(o)
 
